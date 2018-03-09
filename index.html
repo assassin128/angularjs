@@ -1,18 +1,18 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="BlankApp" ng-cloak ng-controller="mainController">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>{{Page.title()}}</title>
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body ng-app="BlankApp" ng-cloak>
-<div ng-controller="helloController">
+<body>
+<div id="main-content" ng-controller="homeController">
     <p>{{sayHello}}</p>
 </div>
 <!-- Angular Material requires Angular.js Libraries -->
@@ -23,9 +23,11 @@
 
 <!-- Angular Material Library -->
 <script src="node_modules/angular-material/angular-material.min.js"></script>
-
+<!-- Application -->
 <script src="app/app.module.js"></script>
 <script src="app/app.routes.js"></script>
-<script src="app/component/hello/hello.controller.js"></script>
+<script src="app/core/services/pageFactory.js"></script>
+<script src="app/app.controller.js"></script>
+<script src="app/components/home/homeController.js"></script>
 </body>
 </html>

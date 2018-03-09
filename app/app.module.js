@@ -17,4 +17,4 @@
 // non-associated person, entity or a system.
 //
 // Copyright 2017 Patient Doctor Technologies, Inc., All rights reserved.
-var app = angular.module('BlankApp', ['ngMaterial']);
+angular.module('BlankApp', ['ngMaterial']);
