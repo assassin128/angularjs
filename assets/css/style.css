@@ -1,0 +1,7 @@
+.main-menu a {
+    color: blue;
+    text-decoration: none;
+}
+.main-menu.red a {
+    color: red;
+}

@@ -1,4 +1,23 @@
-angular.module('BlankApp').controller('mainController', ['$scope', 'pageFactory', mainController]);
-function mainController($scope, pageFactory) {
-    $scope.Page = pageFactory;
-}
+(function () {
+    'use strict';
+
+    angular
+        .module('BlankApp')
+        .controller('mainController', mainController);
+
+    mainController.$inject = ['factoryPage'];
+
+    /* @ngInject */
+    function mainController(factoryPage) {
+        var vm = this;
+        vm.Page = factoryPage;
+        activate();
+
+        ////////////////
+
+        function activate() {
+            //
+        }
+    }
+
+})();

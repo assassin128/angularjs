@@ -1,4 +1,24 @@
-angular.module('BlankApp').controller('homeController', ['$scope', 'pageFactory', homeController]);
-function homeController($scope, pageFactory) {
-    pageFactory.setTitle('home');
-}
+(function () {
+    'use strict';
+
+    angular
+        .module('BlankApp')
+        .controller('homeController', homeController);
+
+    homeController.$inject = ['factoryPage'];
+
+    /* @ngInject */
+    function homeController(factoryPage) {
+        var vm = this;
+        vm.sayHello = 'Say hello';
+
+        activate();
+
+        ////////////////
+
+        function activate() {
+            factoryPage.setTitle('Home');
+        }
+    }
+
+})();
